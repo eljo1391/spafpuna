@@ -22,6 +22,13 @@ import { TerapistaComponent } from './components/parametricos/booking/terapista.
 import { CalendarComponent } from './components/parametricos/booking/calendar.component';
 import { CategoriaListar2Component } from './components/parametricos/booking/categoria-listar2.component';
 
+import { ProveedorComponent } from './components/parametricos/proveedor/proveedor.component';
+import { ProveedorEditComponent } from './components/parametricos/proveedor/proveedor-edit.component';
+
+import { CompraComponent } from './components/parametricos/compra/compra.component';
+import { DetallesCompraComponent } from './components/parametricos/detalles-compra/detalles-compra.component';
+import { CompraEditComponent } from './components/parametricos/compra/compra-edit.component';
+
 const routes: Routes = [
   {
     path: '', data: { title: 'Dashboard' },
@@ -87,6 +94,7 @@ const routes: Routes = [
      ]
   },
   {
+
     path: 'booking', data: { title: 'Booking' },
     children: [
      /* { path: 'servicios/:id', component:  ServicioListar2Component, data: { title: 'Listar Servicios' }, },  */
@@ -107,7 +115,23 @@ const routes: Routes = [
     children: [
       { path: 'generar', component: PlanillaComponent , data: { title: 'Generar Planilla' }, }
      ]
-  }
+  },
+  {
+    path: 'proveedor', data: { title: 'Proveedores' },
+    children: [
+      { path: 'agregar', component: ProveedorEditComponent , data: { title: 'Crear proveedor' }, },
+      { path: 'listar', component: ProveedorComponent , data: { title: 'Listar Proveedores' }, },
+      { path: 'modificar/:id', component: ProveedorEditComponent , data: { title: 'Editar Proveedor' }, }
+     ]
+  },
+  {
+    path: 'compras', data: { title: 'Compras' },
+    children: [
+      { path: 'agregar', component: CompraEditComponent , data: { title: 'Crear compra' }, },
+      { path: 'listar', component: CompraComponent , data: { title: 'Listar compras' }, },
+       { path: 'modificar/:id', component: CompraEditComponent , data: { title: 'Editar compra' }, }
+     ]
+  },
 ];
 
 @NgModule({
