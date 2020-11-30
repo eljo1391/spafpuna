@@ -23,6 +23,7 @@ export class  ProductoEditComponent implements OnInit {
   });
   productos: any[] = [];
   categorias: any[] = [];
+  public formSubmitted = false;
 
   constructor(private fb: FormBuilder,
               private productoService: ProductoService,
@@ -67,6 +68,7 @@ export class  ProductoEditComponent implements OnInit {
   }
 
   guardar() {
+    
     const id = this.route.snapshot.params.id;
     let peticion: Observable<any>;
     console.log(id);
@@ -89,6 +91,15 @@ export class  ProductoEditComponent implements OnInit {
           'success'
         );
       });
+    }
+  }
+
+  campoNoValido(): boolean {
+    if ((this.form.get('costo').value > this.form.get('precioVenta').value) && this.formSubmitted ) {
+      this.formSubmitted = true;
+      return true;
+    } else {
+      return false;
     }
   }
 
