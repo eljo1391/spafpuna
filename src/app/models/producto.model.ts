@@ -1,4 +1,4 @@
-import { CategoriaModel } from './categoria.model';
+
 
 export class ProductoModel {
     productoId: number;
@@ -10,7 +10,6 @@ export class ProductoModel {
     imageName: string;
     estado: string;
     ventasDetalleCollection: any [];
-    categoriaId: CategoriaModel;
 
     constructor() {
 

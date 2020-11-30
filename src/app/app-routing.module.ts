@@ -29,7 +29,6 @@ import { HorarioListComponent } from './components/parametricos/horario/horario-
 import { ProveedorComponent } from './components/parametricos/proveedor/proveedor.component';
 import { ProveedorEditComponent } from './components/parametricos/proveedor/proveedor-edit.component';
 
-import { DisponibilidadComponent } from './components/parametricos/empleado/disponibilidad.component';
 import { CompraComponent } from './components/parametricos/compra/compra.component';
 import { DetallesCompraComponent } from './components/parametricos/detalles-compra/detalles-compra.component';
 import { CompraEditComponent } from './components/parametricos/compra/compra-edit.component';
