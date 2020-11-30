@@ -1,6 +1,6 @@
 {
     "/api/*": {
-        "target": "https://spa-restful-api.herokuapp.com/api",
+        "target": "https://proyectospafpunaangular.herokuapp.com/",
         "secure": true,
         "changeOrigin": true,
         "logLevel": "debug"
