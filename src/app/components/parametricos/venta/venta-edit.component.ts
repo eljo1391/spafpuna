@@ -65,12 +65,13 @@ export class VentaEditComponent implements OnInit {
     private usuarioService: ClienteService) { }
 
     form = this.fb.group({
+      estado: ['Activo'],
       fecha: [this.fechaActual],
       montoTotal: [this.totalVenta, Validators.required],
       numeroComprobante: [ this.nextComprobante, Validators.required],
       medioPagoId: ['', Validators.required],
       usuarioId: [ Validators.required],
-      estado: ['Activo']
+      
     });
 
     currentDate: number = Date.now();
