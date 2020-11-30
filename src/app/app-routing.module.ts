@@ -21,27 +21,20 @@ import { PlanillaComponent } from './components/parametricos/planilla/planilla.c
 import { TerapistaComponent } from './components/parametricos/booking/terapista.component';
 import { CalendarComponent } from './components/parametricos/booking/calendar.component';
 import { CategoriaListar2Component } from './components/parametricos/booking/categoria-listar2.component';
-import { ReservaListComponent } from './components/parametricos/reserva/reserva-list.component';
-import { ProductoListar2Component } from './components/parametricos/producto/producto-listar2.component';
-import { OfertaComponent } from './components/parametricos/oferta/oferta/oferta.component';
-import { DisponibleComponent } from './components/parametricos/disponible/disponible.component';
-import { HorarioListComponent } from './components/parametricos/horario/horario-list.component';
+
 import { ProveedorComponent } from './components/parametricos/proveedor/proveedor.component';
 import { ProveedorEditComponent } from './components/parametricos/proveedor/proveedor-edit.component';
 
 import { CompraComponent } from './components/parametricos/compra/compra.component';
 import { DetallesCompraComponent } from './components/parametricos/detalles-compra/detalles-compra.component';
 import { CompraEditComponent } from './components/parametricos/compra/compra-edit.component';
-import { VentaComponent } from './components/parametricos/venta/venta.component';
-import { VentaEditComponent } from './components/parametricos/venta/venta-edit.component';
-import { VentaReporteComponent } from './components/parametricos/venta/venta-reporte.component';
 
 const routes: Routes = [
   {
     path: '', data: { title: 'Dashboard' },
     children: [
       { path: '', component: DashboardComponent, data: { title: 'Dashboard-Componente' } },
-      { path: 'registrar', component: ClienteEditComponent, data: { title: 'Registrar-Componente' }}
+      { path: 'registrar', component: ClienteEditComponent, data: { title: 'Registrar-Componente' }},
     ]
   },
   {
@@ -51,9 +44,6 @@ const routes: Routes = [
       { path: 'agregar', component: CategoriaEditComponent, data: { title: 'Crear Categoria' }, },
       { path: 'listar', component: CategoriaListarComponent, data: { title: 'Listar Categoria' }, },
      { path: 'modificar/:id', component: CategoriaEditComponent , data: { title: 'Modificar Categoria' } },
-      { path: 'categorias', component: CategoriaListar2Component, data: { title: 'Listar Categoria' }, },
-      { path: 'modificar/:id', component: CategoriaEditComponent , data: { title: 'Modificar Categoria' }, },
-      { path: 'upload/:id', component: CategoriaEditComponent , data: { title: 'Upload Categoria' }, },
     ]
   },
   {
@@ -78,11 +68,6 @@ const routes: Routes = [
       { path: 'agregar', component: EmpleadoEditComponent , data: { title: 'Crear Empleado' }, },
       { path: 'listar', component: EmpleadoListarComponent , data: { title: 'Listar Empleado' }, },
       { path: 'modificar/:id', component: EmpleadoEditComponent , data: { title: 'Editar Empleado' } },
-      { path: 'asignar-horario-edit/:id', component: HorarioAsignarComponent , data: { title: 'Asignar Horario Empleado' } },
-      { path: 'asignar-horario', component: HorarioAsignarComponent , data: { title: 'Asignar Horario Empleado' } },
-      { path: 'horario', component: HorarioListComponent , data: { title: 'Listar Horario Empleado' } },
-      { path: 'disponible', component: DisponibleComponent , data: { title: 'Asignar Disponibilidad' } },
-      { path: 'disponible-listar', component: DisponibleComponent , data: { title: 'Listar Disponibilidad' } }
     ]
   },
   {
@@ -90,7 +75,8 @@ const routes: Routes = [
     children: [
       { path: 'agregar', component: ProductoEditComponent , data: { title: 'Crear Producto' }, },
       { path: 'listar', component:  ProductoListarComponent, data: { title: 'Listar Producto' }, },
-      { path: 'modificar/:id', component: ProductoEditComponent , data: { title: 'Editar Producto' } } ]
+      { path: 'modificar/:id', component: ProductoEditComponent , data: { title: 'Editar Producto' } }
+     ]
   },
   {
     path: 'servicio', data: { title: 'Servicio' },
@@ -104,20 +90,18 @@ const routes: Routes = [
   {
     path: 'reserva', data: { title: 'Reserva' },
     children: [
-      { path: 'agregar', component: ReservEditComponent , data: { title: 'Agregar Reserva' }, },
-      { path: 'listar', component: ReservaListComponent , data: { title: 'Listar Reserva' }, }
+      { path: 'agregar', component: ReservEditComponent , data: { title: 'Agregar Reserva' }, }
      ]
   },
   {
+
     path: 'booking', data: { title: 'Booking' },
     children: [
      /* { path: 'servicios/:id', component:  ServicioListar2Component, data: { title: 'Listar Servicios' }, },  */
-      { path: 'categorias', component: CategoriaListar2Component, data: { title: 'Listar Categoria' }, },
-      { path: 'ofertas', component: OfertaComponent, data: { title: 'Ofertas-Componente' }},
-      { path: 'productos', component: ProductoListar2Component , data: { title: 'Listar Productos' } },
-      { path: 'terapista/:id', component:  TerapistaComponent, data: { title: 'terapista' }, },
       { path: 'servicios/:id', component: ServicioListar2Component , data: { title: 'Listar Servicio' } },
-      { path: 'calendar/:id', component:  CalendarComponent, data: { title: 'Calendar' }, }
+      { path: 'calendar/:id', component:  CalendarComponent, data: { title: 'Calendar' }, },
+      { path: 'categorias', component: CategoriaListar2Component, data: { title: 'Listar Categoria' }, },
+      { path: 'terapista/:id', component:  TerapistaComponent, data: { title: 'terapista' }, }
     ]
   },
   {
@@ -146,15 +130,6 @@ const routes: Routes = [
       { path: 'agregar', component: CompraEditComponent , data: { title: 'Crear compra' }, },
       { path: 'listar', component: CompraComponent , data: { title: 'Listar compras' }, },
        { path: 'modificar/:id', component: CompraEditComponent , data: { title: 'Editar compra' }, }
-     ]
-  },
-  {
-    path: 'ventas', data: { title: 'Ventas' },
-    children: [
-      { path: 'agregar', component: VentaEditComponent , data: { title: 'Crear venta' }, },
-      { path: 'listar', component: VentaComponent , data: { title: 'Listar ventas' }, },
-      { path: 'modificar/:id', component: VentaEditComponent , data: { title: 'Editar venta' }, },
-      { path: 'reporte', component: VentaReporteComponent , data: { title: 'Reporte de ventas' }, }
      ]
   },
 ];
