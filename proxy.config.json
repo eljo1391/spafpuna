@@ -1,8 +1,8 @@
 {
     "/api/*": {
-        "target":"http://localhost:8084/",
+        "target": "https://proyectospafpuna.herokuapp.com",
         "secure": true,
         "changeOrigin": true,
-        "logLevel":"debug"
+        "logLevel": "debug"
     }
 }
