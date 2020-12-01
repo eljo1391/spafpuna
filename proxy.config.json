@@ -1,6 +1,6 @@
 {
     "/api/*": {
-        "target": "https://spafpuna.herokuapp.com/",
+        "target": "https://proyectospafpuna.herokuapp.com/",
         "secure": true,
         "changeOrigin": true,
         "logLevel": "debug"
