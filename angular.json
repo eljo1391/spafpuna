@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/proyecto-base",
+            "outputPath": "dist/spafpuna",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -70,18 +70,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "proyecto-base:build"
+            "browserTarget": "spafpuna:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "proyecto-base:build:production"
+              "browserTarget": "spafpuna:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "proyecto-base:build"
+            "browserTarget": "spafpuna:build"
           }
         },
         "test": {
@@ -123,12 +123,12 @@
           },
           "configurations": {
             "production": {
-              "devServerTarget": "proyecto-base:serve:production"
+              "devServerTarget": "spafpuna:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "proyecto-base"
+  "defaultProject": "spafpuna"
 }

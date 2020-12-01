@@ -4,7 +4,7 @@
 
 export const environment = {
   production: true,
-  URL_BASE: 'https://proyectospafpuna.herokuapp.com/api'
+  URL_BASE: 'https://proyectospafpuna.herokuapp.com'
 };
 
 /*
