@@ -72,7 +72,8 @@
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "spafpuna:build:production"
+                            "browserTarget": "spafpuna:build:production",
+                            "proxyConfig": "src/proxy.config.json"
                         }
                     }
                 },
